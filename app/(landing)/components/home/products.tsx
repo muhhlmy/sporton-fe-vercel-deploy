@@ -7,13 +7,13 @@ import { FiPlus } from "react-icons/fi";
 const productList = [
   {
     name: "SportsOn Product 1",
-    category: "Running",
+    category: "Football",
     price: 450000,
     imgUrl: "product-1.png",
   },
   {
     name: "SportsOn Product 2",
-    category: "Running",
+    category: "Tennis",
     price: 230000,
     imgUrl: "product-2.png",
   },
@@ -25,7 +25,7 @@ const productList = [
   },
   {
     name: "SportsOn Product 4",
-    category: "Running",
+    category: "Football",
     price: 340000,
     imgUrl: "product-4.png",
   },
@@ -37,7 +37,7 @@ const productList = [
   },
   {
     name: "SportsOn Product 6",
-    category: "Running",
+    category: "Basketball",
     price: 500000,
     imgUrl: "product-6.png",
   },
