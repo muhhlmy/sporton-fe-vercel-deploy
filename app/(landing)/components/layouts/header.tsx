@@ -6,14 +6,12 @@ const Header = () => {
   return (
     <header>
       <div className="flex justify-between gap-10 container mx-auto py-7">
-        {/* Logo */}
         <Image
           src="/images/logo.svg"
           alt="SportOn Logo"
           width={127}
           height={30}
         />
-        {/* Navigasi */}
         <nav className="flex gap-20 font-medium">
           <Link
             href="#"
@@ -24,7 +22,6 @@ const Header = () => {
           <Link href="#">Category</Link>
           <Link href="#">Explore Products</Link>
         </nav>
-        {/* Icons */}
         <div className="flex gap-10">
           <FiSearch size={24} />
           <div className="relative">
