@@ -31,7 +31,7 @@ const productList = [
   },
   {
     name: "SportsOn Slowlivin",
-    category: "Basketball",
+    category: "Running",
     price: 119000,
     imgUrl: "product-5.png",
   },
