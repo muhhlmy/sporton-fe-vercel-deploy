@@ -51,7 +51,7 @@ const productList = [
     name: "SportsOn Rockets Tennis",
     category: "Tennis",
     price: 999000,
-    imgUrl: "product-8.png",
+    imgUrl: "product-9.png",
   },
 ];
 
