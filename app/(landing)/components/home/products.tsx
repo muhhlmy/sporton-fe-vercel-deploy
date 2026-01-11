@@ -3,6 +3,7 @@ import Link from "next/link";
 import { styleText } from "util";
 import Button from "../ui/button";
 import { FiPlus } from "react-icons/fi";
+import priceFormatter from "@/app/utils/price-formater";
 
 const productList = [
   {
@@ -84,11 +85,7 @@ const ProductsSection = () => {
             <div className="flex justify-between mb-8">
               <div className="text-gray-500">{product.category}</div>
               <div className="text-primary font-medium">
-                {Intl.NumberFormat("id-ID", {
-                  style: "currency",
-                  currency: "IDR",
-                  maximumSignificantDigits: 3,
-                }).format(product.price)}
+                {priceFormatter(product.price)}
               </div>
             </div>
           </Link>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import CardPopup from "../ui/card-popup";
 
 const Header = () => {
   return (
@@ -22,7 +23,7 @@ const Header = () => {
           <Link href="#">Category</Link>
           <Link href="#">Explore Products</Link>
         </nav>
-        <div className="flex gap-10">
+        <div className="flex gap-10 relative">
           <FiSearch size={24} />
           <div className="relative">
             <FiShoppingBag size={24} />
@@ -30,6 +31,7 @@ const Header = () => {
               3
             </div>
           </div>
+          <CardPopup />
         </div>
       </div>
     </header>
