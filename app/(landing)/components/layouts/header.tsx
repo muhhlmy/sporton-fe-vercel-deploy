@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex gap-10 relative">
           <FiSearch size={24} />
           <button
-            className="relative"
+            className="relative cursor-pointer"
             onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}
           >
             <FiShoppingBag size={24} />

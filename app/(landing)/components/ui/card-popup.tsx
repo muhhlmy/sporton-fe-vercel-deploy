@@ -34,7 +34,7 @@ const CardPopup = () => {
   );
 
   return (
-    <div className="absolute bg-white right-0 top-12 shadow-xl border border-gray-200 w-90">
+    <div className="absolute bg-white right-0 top-12 shadow-xl border border-gray-200 w-90 z-10">
       <div className="font-bold text-center p-4 border-b border-gray-200">
         Shopping Cart
       </div>
