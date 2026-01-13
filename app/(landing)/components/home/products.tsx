@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { styleText } from "util";
 import Button from "../ui/button";
 import { FiPlus } from "react-icons/fi";
 import priceFormatter from "@/app/utils/price-formater";

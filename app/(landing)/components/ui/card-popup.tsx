@@ -1,7 +1,7 @@
 import priceFormatter from "@/app/utils/price-formater";
 import Image from "next/image";
 import Button from "./button";
-import { FiTrash2 } from "react-icons/fi";
+import { FiArrowRight, FiTrash2 } from "react-icons/fi";
 
 const cartList = [
   {
@@ -28,6 +28,11 @@ const cartList = [
 ];
 
 const CardPopup = () => {
+  const totalPrice = cartList.reduce(
+    (total, item) => total + item.price * item.qty,
+    0
+  );
+
   return (
     <div className="absolute bg-white right-0 top-12 shadow-xl border border-gray-200 w-90">
       <div className="font-bold text-center p-4 border-b border-gray-200">
@@ -60,6 +65,17 @@ const CardPopup = () => {
           </Button>
         </div>
       ))}
+      <div className="border-t border-gray-200 p-4">
+        <div className="font-semibold flex justify-between items-center">
+          <div className="text-sm">Total</div>
+          <div className="text-primary text-xs">
+            {priceFormatter(totalPrice)}
+          </div>
+        </div>
+        <Button variant="dark" size="small" className="w-full mt-4">
+          Checkout Now <FiArrowRight />
+        </Button>
+      </div>
     </div>
   );
 };
