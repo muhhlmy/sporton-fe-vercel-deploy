@@ -32,7 +32,7 @@ const PaymentOptions = () => {
             <div className="text-sm">{info.account_number}</div>
             <div className="text-sm opacity-70">{info.account_holder}</div>
           </div>
-          <div className="ml-auto bg-blue-50  text-gray-800 h-fit px-2 py-1 self-center text-xs">
+          <div className="ml-auto bg-blue-50 text-gray-800 h-fit px-2 py-1 self-center text-xs">
             Bank Transfer
           </div>
         </div>

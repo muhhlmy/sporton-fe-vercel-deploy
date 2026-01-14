@@ -1,44 +1,43 @@
-import { FiCreditCard } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+import Button from "../ui/button";
 import CardWithHeader from "../ui/card-with-header";
+import FileUpload from "../ui/file-upload";
+import priceFormatter from "@/app/utils/price-formater";
 
-const paymentList = [
-  {
-    bank_name: "BCA",
-    account_number: 82329038290,
-    account_holder: "PT SportsOn Digital",
-  },
-  {
-    bank_name: "Mandiri",
-    account_number: 82329038290,
-    account_holder: "PT SportsOn Digital",
-  },
-  {
-    bank_name: "BRI",
-    account_number: 82329038290,
-    account_holder: "PT SportsOn Digital",
-  },
-];
-
-const PaymentOptions = () => {
+const PaymentSteps = () => {
   return (
-    <CardWithHeader title="Payment Options">
-      {paymentList.map((info, index) => (
-        <div className="flex gap-5 p-5 border-b border-gray-100" key={index}>
-          <div className="bg-blue-100 p-4 text-blue-500 h-fit self-center">
-            <FiCreditCard size={24} />
-          </div>
-          <div className="self-center">
-            <div className="font-bold">{info.bank_name}</div>
-            <div className="text-sm">{info.account_number}</div>
-            <div className="text-sm opacity-70">{info.account_holder}</div>
-          </div>
-          <div className="ml-auto bg-blue-50  text-gray-800 h-fit px-2 py-1 self-center text-xs">
-            Bank Transfer
-          </div>
+    <CardWithHeader title="Payment Steps">
+      <div className="p-5">
+        <ol className="list-decimal text-xs pl-2 flex flex-col gap-4 mb-5">
+          <li>
+            Transfer the total amount of <b>Rp. 1.035.000</b> to your preferred
+            bank account listed under &apos;Payment Options&apos; (BCA, Mandiri,
+            or BTPN).
+          </li>
+          <li>
+            After completing the transfer, <b>keep the payment receipt</b> or a
+            screenshot of the transfer confirmation. This will be needed for the
+            next step.
+          </li>
+          <li>
+            Upload the payment receipt/screenshot using the{" "}
+            <b>&apos;Upload Receipt & Confirm&apos;</b> button below to validate
+            your transaction.
+          </li>
+        </ol>
+        <FileUpload />
+      </div>
+      <div className="border-t border-gray-200 p-4">
+        <div className="font-semibold flex justify-between items-center">
+          <div className="text-sm">Total</div>
+          <div className="text-primary text-xs">{priceFormatter(1045000)}</div>
         </div>
-      ))}
+        <Button variant="dark" className="w-full mt-4">
+          <FiCheckCircle /> Upload Receipt & Confirm
+        </Button>
+      </div>
     </CardWithHeader>
   );
 };
 
-export default PaymentOptions;
+export default PaymentSteps;
