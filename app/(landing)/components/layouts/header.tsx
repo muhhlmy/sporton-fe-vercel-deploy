@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
-import CardPopup from "../ui/card-popup";
+import CardPopup from "../ui/cart-popup";
 import { useState } from "react";
 
 const Header = () => {
