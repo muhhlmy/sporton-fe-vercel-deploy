@@ -1,7 +1,11 @@
+// "use client";
+// Ga perlu karena di Header (Parent Element) sudah ada use client
+
 import priceFormatter from "@/app/utils/price-formater";
 import Image from "next/image";
 import Button from "./button";
 import { FiArrowRight, FiTrash2 } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export const cartList = [
   {
@@ -75,6 +79,11 @@ const CardPopup = () => {
     0
   );
 
+  const { push } = useRouter();
+  const handleCheckout = () => {
+    push("/checkout");
+  };
+
   return (
     <div className="absolute bg-white right-0 top-12 shadow-xl border border-gray-200 w-90 z-10">
       <div className="font-bold text-center p-4 border-b border-gray-200">
@@ -116,7 +125,12 @@ const CardPopup = () => {
             {priceFormatter(totalPrice)}
           </div>
         </div>
-        <Button variant="dark" size="small" className="w-full mt-4">
+        <Button
+          variant="dark"
+          size="small"
+          className="w-full mt-4"
+          onClick={handleCheckout}
+        >
           Checkout Now <FiArrowRight />
         </Button>
       </div>
