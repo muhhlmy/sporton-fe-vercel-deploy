@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
-import CardPopup from "../ui/cart-popup";
+import CartPopup from "../ui/cart-popup";
 import { useState } from "react";
 
 const Header = () => {
@@ -41,7 +41,7 @@ const Header = () => {
               3
             </div>
           </button>
-          {isCartPopupOpen && <CardPopup />}
+          {isCartPopupOpen && <CartPopup />}
         </div>
       </div>
     </header>

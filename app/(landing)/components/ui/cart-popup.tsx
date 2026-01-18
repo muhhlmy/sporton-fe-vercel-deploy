@@ -6,6 +6,8 @@ import Image from "next/image";
 import Button from "./button";
 import { FiArrowRight, FiTrash2 } from "react-icons/fi";
 import { useRouter } from "next/navigation";
+import { useCartStore } from "@/app/hooks/use-cart-store";
+import { getImageUrl } from "@/app/lib/api";
 
 export const cartList = [
   {
@@ -73,28 +75,31 @@ export const cartList = [
   },
 ];
 
-const CardPopup = () => {
-  const totalPrice = cartList.reduce(
-    (total, item) => total + item.price * item.qty,
-    0
-  );
-
+const CartPopup = () => {
   const { push } = useRouter();
+  const { items, removeItem } = useCartStore();
   const handleCheckout = () => {
     push("/checkout");
   };
+
+  const totalPrice = items.reduce(
+    (total, item) => total + item.price * item.qty,
+    0,
+  );
+
+  console.log("Cart Item: ", items);
 
   return (
     <div className="absolute bg-white right-0 top-12 shadow-xl border border-gray-200 w-90 z-10">
       <div className="font-bold text-center p-4 border-b border-gray-200">
         Shopping Cart
       </div>
-      <div className="overflow-auto max-h-[300px]">
-        {cartList.map((item, index) => (
+      <div className="overflow-auto max-h-75">
+        {items.map((item, index) => (
           <div className="border-b border-gray-200 p-4 flex gap-3" key={index}>
             <div className="bg-primary-light aspect-square w-16 flex justify-center items-center">
               <Image
-                src={`/images/products/${item.imgUrl}`}
+                src={getImageUrl(item.imageUrl)}
                 alt={item.name}
                 width={63}
                 height={63}
@@ -112,6 +117,7 @@ const CardPopup = () => {
               size="small"
               variant="ghost"
               className="w-7 h-7 p-0! self-center mx-auto"
+              onClick={() => removeItem(item._id)}
             >
               <FiTrash2 />
             </Button>
@@ -138,4 +144,4 @@ const CardPopup = () => {
   );
 };
 
-export default CardPopup;
+export default CartPopup;
