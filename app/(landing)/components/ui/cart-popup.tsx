@@ -9,71 +9,71 @@ import { useRouter } from "next/navigation";
 import { useCartStore } from "@/app/hooks/use-cart-store";
 import { getImageUrl } from "@/app/lib/api";
 
-export const cartList = [
-  {
-    name: "SportsOn Hyperfast Shoes",
-    category: "Running",
-    price: 329000,
-    imgUrl: "product-1.png",
-    qty: 2,
-  },
-  {
-    name: "SportsOn Rockets Tennis",
-    category: "Tennis",
-    price: 999000,
-    imgUrl: "product-2.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-  {
-    name: "SportsOn Slowlivin",
-    category: "Running",
-    price: 119000,
-    imgUrl: "product-3.png",
-    qty: 1,
-  },
-];
+// export const cartList = [
+//   {
+//     name: "SportsOn Hyperfast Shoes",
+//     category: "Running",
+//     price: 329000,
+//     imgUrl: "product-1.png",
+//     qty: 2,
+//   },
+//   {
+//     name: "SportsOn Rockets Tennis",
+//     category: "Tennis",
+//     price: 999000,
+//     imgUrl: "product-2.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+//   {
+//     name: "SportsOn Slowlivin",
+//     category: "Running",
+//     price: 119000,
+//     imgUrl: "product-3.png",
+//     qty: 1,
+//   },
+// ];
 
 const CartPopup = () => {
   const { push } = useRouter();
