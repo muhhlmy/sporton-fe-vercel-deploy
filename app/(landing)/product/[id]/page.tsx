@@ -33,7 +33,7 @@ const ProductDetail = async ({ params }: TPageProps) => {
         <div className="text-primary font-semibold text-[32px] mb-12">
           {priceFormatter(product.price)}
         </div>
-        <ProductActions stock={product.stock} />
+        <ProductActions product={product} stock={product.stock} />
       </div>
     </main>
   );

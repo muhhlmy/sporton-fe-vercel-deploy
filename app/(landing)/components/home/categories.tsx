@@ -39,7 +39,7 @@ const CategoriesSection = ({ categories }: TCategoriesProps) => {
                 width={86}
                 height={86}
                 alt="Categories Icon"
-                className="mb-[10px]"
+                className="mb-2.5"
               />
               <div className="text-primary font-meidium text-xl text-center">
                 {category.name}
