@@ -12,7 +12,7 @@ export interface CartItem extends Product {
 
 export interface CustomerInfo {
   customerName: string;
-  customerContact: string;
+  customerContact: string | number | null;
   customerAddress: string;
 }
 
