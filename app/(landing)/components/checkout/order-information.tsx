@@ -27,7 +27,7 @@ const OrderInformation = ({ formData, setFormData }: TOrderInformation) => {
             name="customerName"
             placeholder="Type your full name"
             onChange={handleInputChange}
-            value={formData.customerName}
+            value={formData.customerName ?? ""}
           />
         </div>
         <div className="input-group">
@@ -38,7 +38,7 @@ const OrderInformation = ({ formData, setFormData }: TOrderInformation) => {
             name="customerContact"
             placeholder="Type your whatsapp number"
             onChange={handleInputChange}
-            value={formData.customerContact}
+            value={formData.customerContact ?? ""}
           />
         </div>
         <div className="input-group">
@@ -49,7 +49,7 @@ const OrderInformation = ({ formData, setFormData }: TOrderInformation) => {
             placeholder="Type your shipping address"
             rows={7}
             onChange={handleInputChange}
-            value={formData.customerAddress}
+            value={formData.customerAddress ?? ""}
           />
         </div>
       </div>

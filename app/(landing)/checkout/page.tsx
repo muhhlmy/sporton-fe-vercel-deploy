@@ -12,7 +12,7 @@ const Checkout = () => {
 
   const [formData, setFormData] = useState<CustomerInfo>({
     customerName: "",
-    customerContact: "",
+    customerContact: null,
     customerAddress: "",
   });
 
