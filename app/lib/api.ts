@@ -2,9 +2,11 @@ export async function fetchAPI<T>(
   endpoint: string,
   options?: RequestInit,
 ): Promise<T> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, {
+  const fallbackApiUrl = `https://be-sporton.agunacourse.com/api`;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || fallbackApiUrl;
+  const res = await fetch(`${apiUrl}${endpoint}`, {
     ...options,
-    cache: options?.cache || "no-store", // Kita set "no-store" karena kita ingin mendapatkan data lebih Real-time atau Terupdate
+    cache: options?.cache || "no-store",
   });
 
   if (!res.ok) {
