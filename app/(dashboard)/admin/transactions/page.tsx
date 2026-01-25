@@ -11,6 +11,9 @@ const TransactionManagement = () => {
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+  const handleViewDetails = () => {
+    setIsOpen(true);
+  };
 
   return (
     <div>
@@ -22,7 +25,7 @@ const TransactionManagement = () => {
           </p>
         </div>
       </div>
-      <TransactionTable />
+      <TransactionTable onViewDetails={handleViewDetails} />
       <TransactionModal isOpen={isOpen} onClose={handleCloseModal} />
     </div>
   );

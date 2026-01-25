@@ -26,7 +26,11 @@ const transactionData = [
   },
 ];
 
-const TransactionTable = () => {
+type TTransactionTableProps = {
+  onViewDetails: () => void;
+};
+
+const TransactionTable = ({ onViewDetails }: TTransactionTableProps) => {
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case "pending":
@@ -71,7 +75,10 @@ const TransactionTable = () => {
                 </div>
               </td>
               <td className="px-6 py-7.5 flex items-center gap-3 text-gray-600">
-                <button className="flex gap-2 cursor-pointer items-center hover:bg-gray-100 py-1 px-2 rounded-md">
+                <button
+                  onClick={onViewDetails}
+                  className="flex gap-2 cursor-pointer items-center hover:bg-gray-100 py-1 px-2 rounded-md"
+                >
                   <FiEye size={18} /> View Details
                 </button>
               </td>
