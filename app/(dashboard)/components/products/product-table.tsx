@@ -2,31 +2,31 @@ import priceFormatter from "@/app/utils/price-formater";
 import Image from "next/image";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
-const ProductTable = () => {
-  const productData = [
-    {
-      name: "SportOn Product 1",
-      imageURL: "/images/products/product-1.png",
-      category: "Running",
-      price: 289000,
-      stock: 10,
-    },
-    {
-      name: "SportOn Product 2",
-      imageURL: "/images/products/product-2.png",
-      category: "Running",
-      price: 500000,
-      stock: 4,
-    },
-    {
-      name: "SportOn Product 3",
-      imageURL: "/images/products/product-3.png",
-      category: "Running",
-      price: 189000,
-      stock: 45,
-    },
-  ];
+const productData = [
+  {
+    name: "SportOn Product 1",
+    imageURL: "/images/products/product-1.png",
+    category: "Running",
+    price: 289000,
+    stock: 10,
+  },
+  {
+    name: "SportOn Product 2",
+    imageURL: "/images/products/product-2.png",
+    category: "Running",
+    price: 500000,
+    stock: 4,
+  },
+  {
+    name: "SportOn Product 3",
+    imageURL: "/images/products/product-3.png",
+    category: "Running",
+    price: 189000,
+    stock: 45,
+  },
+];
 
+const ProductTable = () => {
   return (
     <div className="bg-white rounded-xl border border-gray-200">
       <table className="w-full text-left border-collapse">

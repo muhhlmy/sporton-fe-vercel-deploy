@@ -1,7 +1,5 @@
 "use client";
 
-import Button from "@/app/(landing)/components/ui/button";
-import { FiPlus } from "react-icons/fi";
 import { useState } from "react";
 import TransactionTable from "../../components/transactions/transaction-table";
 import TransactionModal from "../../components/transactions/transaction-modal";

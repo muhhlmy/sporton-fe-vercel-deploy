@@ -1,21 +1,20 @@
-import priceFormatter from "@/app/utils/price-formater";
 import Image from "next/image";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
-const CategoryTable = () => {
-  const categoryData = [
-    {
-      name: "Running",
-      imageURL: "/images/categories/category-running.png",
-      description: "Lorem Ipsum",
-    },
-    {
-      name: "Swimming",
-      imageURL: "/images/categories/category-swimming.png",
-      description: "Lorem Ipsum",
-    },
-  ];
+const categoryData = [
+  {
+    name: "Running",
+    imageURL: "/images/categories/category-running.png",
+    description: "Lorem Ipsum",
+  },
+  {
+    name: "Swimming",
+    imageURL: "/images/categories/category-swimming.png",
+    description: "Lorem Ipsum",
+  },
+];
 
+const CategoryTable = () => {
   return (
     <div className="bg-white rounded-xl border border-gray-200">
       <table className="w-full text-left border-collapse">

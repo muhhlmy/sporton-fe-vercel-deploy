@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Modal from "../ui/modal";
-import { useState } from "react";
 import priceFormatter from "@/app/utils/price-formater";
 import Button from "@/app/(landing)/components/ui/button";
 import { FiCheck, FiX } from "react-icons/fi";
@@ -11,9 +10,6 @@ type TTransactionModalProps = {
 };
 
 const TransactionModal = ({ isOpen, onClose }: TTransactionModalProps) => {
-  const [imageFile, setImageFile] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
-
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Verify Transaction">
       <div className="flex gap-6">

@@ -1,6 +1,5 @@
 import priceFormatter from "@/app/utils/price-formater";
-import Image from "next/image";
-import { FiEdit2, FiEye, FiTrash2 } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
 
 const transactionData = [
   {
