@@ -2,9 +2,11 @@ export async function fetchAPI<T>(
   endpoint: string,
   options?: RequestInit,
 ): Promise<T> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, {
+  const fallbackApiUrl = `https://be-sporton.agunacourse.com/api`;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || fallbackApiUrl;
+  const res = await fetch(`${apiUrl}${endpoint}`, {
     ...options,
-    cache: options?.cache || "no-store", // kita set no-store karena kita ingin mendapat data lebih real time atau lebih updated
+    cache: options?.cache || "no-store",
   });
 
   if (!res.ok) {
@@ -23,8 +25,8 @@ export async function fetchAPI<T>(
 }
 
 export function getImageUrl(path: string) {
-  if (path.startsWith("http")) return path; // artinya url nya sudah valid
-  return `${process.env.NEXT_PUBLIC_API_ROOT}/${path}`;
+  if (path.startsWith("http")) return path;
+  return `${process.env.NEXT_PUBLIC_API_ROOT || "https://be-sporton.agunacourse.com/"}${path}`;
 }
 
 export function getAuthHeaders() {
