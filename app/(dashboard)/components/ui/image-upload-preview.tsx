@@ -35,7 +35,7 @@ const ImageUploadPreview = ({
         className="border-2 border-dashed border-primary bg-primary/5 rounded-lg h-50 flex flex-col justify-center items-center"
       >
         {value ? (
-          <div className="max-w-[190px] relative">
+          <div className="max-w-47.5 relative">
             <Image
               src={value}
               alt="preview product"

@@ -40,7 +40,7 @@ const LoginPage = () => {
 
   return (
     <main className="bg-[#F7F9FA] w-full min-h-screen flex justify-center items-center">
-      <div className="max-w-136 w-full bg-white rounded-xl border-t-4 border-primary py-12 px-[72px]">
+      <div className="max-w-136 w-full bg-white rounded-xl border-t-4 border-primary py-12 px-18">
         <Image
           src="/images/logo-admin.svg"
           alt="logo admin"
